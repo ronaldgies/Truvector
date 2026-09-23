@@ -1,0 +1,50 @@
+name: Update CapEx dashboard
+
+on:
+  schedule:
+    - cron: "17 14 * * 1"        # Mondays 14:17 UTC (about 7:17 am Pacific)
+  workflow_dispatch:              # lets you run it by hand from the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - data/manual.json         # approving a hand-entered update rebuilds the page
+      - scripts/**
+      - templates/**
+
+permissions:
+  contents: write                 # needed so the job can commit the refreshed page
+
+concurrency:
+  group: update-dashboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pull the latest FRED data
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python scripts/update_data.py
+
+      - name: Rebuild the dashboard page
+        run: python scripts/build_dashboard.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "truvector-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/fred.json public/capex-dashboard.html
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Update CapEx dashboard data"
+            git push
+          fi

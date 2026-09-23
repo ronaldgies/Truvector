@@ -1,0 +1,125 @@
+
+/* ---------- CapEx dashboard page ---------- */
+.pagehead {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  margin-inline: -20px; padding-inline: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.pagehead .wrap { padding-block: 64px 40px; }
+.pagehead h1 { font-size: clamp(32px, 5vw, 52px); margin-bottom: 16px; }
+.pagehead .lede { font-size: 18px; margin-bottom: 26px; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 14px 40px; margin: 0; }
+.meta-row dt { font-family: var(--font-tech); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); }
+.meta-row dd { margin: 4px 0 0; font-family: var(--font-mono); font-size: 14px; font-weight: 600; }
+
+.dash .wrap > section { padding-block: 0; }
+.dash section { padding-block: 0; margin-top: 56px; }
+.dash h2.section-title { font-size: 24px; line-height: 1.25; margin: 0 0 8px; }
+.section-note { font-size: 15px; color: var(--ink-soft); margin: 0 0 20px; max-width: 46em; line-height: 1.6; }
+
+.notice { margin: 32px 0 0; padding: 14px 18px; background: var(--bg-alt); border-left: 4px solid var(--orange); font-size: 15px; }
+
+/* current reading */
+.reading { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; align-items: start; }
+.dash .reading { margin-top: 40px; }
+@media (max-width: 860px) { .reading { grid-template-columns: 1fr; gap: 28px; } }
+.dash h2.eyebrow { font-family: var(--font-tech); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-text); font-weight: 400; margin: 0 0 12px; line-height: 1.4; }
+.regime { font-family: var(--font-mono); font-size: clamp(30px, 4.4vw, 42px); font-weight: 600; color: var(--blue-text); line-height: 1.15; margin: 0 0 8px; }
+.regime-sub { margin: 0 0 12px; color: var(--ink-soft); font-size: 15px; line-height: 1.55; max-width: 34em; }
+.bignum { font-family: var(--font-display); margin: 24px 0 4px; font-size: 14px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+.bignum span { font-family: var(--font-mono); font-size: 40px; letter-spacing: 0; color: var(--ink); font-weight: 600; margin-right: 8px; text-transform: none; }
+.reading-chart { margin: 0; background: var(--panel); border: 1px solid var(--rule); padding: 22px 22px 14px; }
+.reading-chart figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin-bottom: 10px; }
+.cap { font-weight: 800; font-size: 16px; }
+.capsub { font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft); }
+
+/* svg charts: all colour from tokens so both themes work */
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart .axis { stroke: var(--ink-soft); stroke-width: 1.5; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .bar { fill: var(--blue-text); }
+.chart .bar.latest, .chart .dot.peak { fill: var(--orange); stroke: var(--ink); stroke-width: 2; }
+.chart .stem { stroke: var(--blue-text); stroke-width: 2; }
+.chart .stem.peak { stroke: var(--ink); }
+.chart .dot { fill: var(--blue-text); }
+.chart text { font-family: var(--font-mono); }
+.chart .val { fill: var(--ink); font-size: 14px; }
+.chart .val.strong { font-weight: 600; font-size: 15px; }
+.chart .tick { fill: var(--ink-soft); font-size: 13px; }
+.chart .axislabel { fill: var(--ink-soft); font-size: 13px; font-family: var(--font-display); }
+
+.tableview { margin-top: 10px; font-size: 14px; }
+.tableview summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; color: var(--blue-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.tableview[open] summary { margin-bottom: 6px; }
+.mini { border-collapse: collapse; width: 100%; font-size: 14px; }
+.mini th, .mini td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--rule); }
+.mini td { font-family: var(--font-mono); }
+.mini thead th { font-size: 12px; color: var(--ink-soft); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+
+/* scorecard */
+.tscroll { overflow-x: auto; }
+.scorecard { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--rule); }
+.scorecard th, .scorecard td { padding: 14px 16px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.scorecard tbody tr:last-child > * { border-bottom: 0; }
+.scorecard thead th { background: var(--blue); color: #F7F8F9; font-family: var(--font-tech); font-size: 10px; text-transform: uppercase; letter-spacing: .14em; font-weight: 400; text-align: left; padding-block: 14px; }
+.scorecard .r { text-align: right; }
+.scorecard .c { text-align: center; }
+.scorecard tbody th { text-align: left; font-weight: 400; }
+.scorecard .nm { display: block; font-weight: 800; font-size: 16px; line-height: 1.35; }
+.scorecard .meta { display: block; font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); margin-top: 3px; line-height: 1.4; }
+.scorecard td.n { font-family: var(--font-mono); font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scorecard .per { display: block; font-family: var(--font-display); font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.scorecard td.chg { font-weight: 600; }
+.scorecard td.up { color: var(--up); }
+.scorecard td.down { color: var(--down); }
+.scorecard td.vec { text-align: center; padding-block: 6px; }
+.arr { display: block; margin-inline: auto; width: 96px; height: auto; }
+.arr.up { color: var(--blue-text); }
+.arr.down { color: var(--down); }
+.arr line { stroke: currentColor; stroke-width: 3.5; stroke-linecap: round; }
+.arr polygon, .arr circle { fill: currentColor; }
+.flag { display: inline-block; font-family: var(--font-mono); font-size: 11px; font-weight: 400; padding: 1px 7px; border: 1px solid var(--ink-soft); color: var(--ink-soft); margin-left: 8px; vertical-align: 2px; white-space: nowrap; }
+
+/* lower panels */
+.two-col { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; margin-top: 56px; }
+.two-col > section { margin-top: 0; }
+@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; gap: 48px; } }
+.panel { margin: 0; background: var(--panel); border: 1px solid var(--rule); padding: 22px; }
+.callout { margin: 18px 0 0; padding: 14px 16px; background: var(--bg-alt); border-left: 4px solid var(--orange); font-size: 15px; line-height: 1.55; }
+ol.beige { list-style: none; margin: 0; }
+.beige li { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.beige li:first-child { padding-top: 0; }
+.beige li:last-child { border-bottom: 0; padding-bottom: 0; }
+.beige time { font-family: var(--font-mono); font-size: 13px; color: var(--blue-text); font-weight: 600; }
+.beige p { margin: 4px 0 0; font-size: 15px; line-height: 1.55; }
+
+.notes { margin-top: 64px; border-top: 1px solid var(--rule); padding-top: 28px; }
+.dash .notes { padding-top: 28px; }
+.notes h2.section-title { font-size: 18px; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+@media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-grid ul { margin: 0; padding-left: 20px; }
+.footer-grid li { margin-bottom: 8px; }
+.corr-note { margin: 22px 0 0; padding: 14px 16px; border: 1px dashed var(--down); font-size: 14px; }
+.corr-note strong { color: var(--down); }
+
+footer { margin-top: 56px; }
+
+@media (max-width: 720px) {
+  .pagehead .wrap { padding-block: 44px 32px; }
+  .dash section { margin-top: 44px; }
+  .reading-chart, .panel { padding: 16px; }
+  .scorecard th, .scorecard td { padding: 12px 10px; }
+  .scorecard .nm { font-size: 15px; }
+  .scorecard td.n { font-size: 14px; }
+}
+@media (max-width: 600px) {
+  .col-prior { display: none; }
+  .arr { width: 60px; }
+  .scorecard td.vec { padding-inline: 4px; }
+  .scorecard th, .scorecard td { padding-inline: 8px; }
+  .scorecard thead th { letter-spacing: .06em; }
+}

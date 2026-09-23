@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CapEx &amp; Industrial Demand | Truvector Industries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&amp;family=Raleway:wght@400;500;600;800&amp;family=IBM+Plex+Mono:wght@400;600&amp;display=swap">
+<style>body{margin:0}html{-webkit-text-size-adjust:100%}
+
+:root {
+  --bg: #F7F8F9;
+  --bg-alt: #ECEFF2;
+  --ink: #11161A;
+  --ink-soft: #46515C;
+  --blue: #1C3F5E;
+  --blue-text: #1C3F5E;
+  --orange: #F26C21;
+  --silver: #A6ABB1;
+  --rule: #D3D8DD;
+  --grid: rgba(28,63,94,.07);
+  --btn-bg: #F26C21;
+  --btn-ink: #11161A;
+  --panel: #FFFFFF;
+  --up: #2F6B45;
+  --down: #9A3324;
+  --track: #E3E7EB;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-display: "Raleway", "Helvetica Neue", Arial, sans-serif;
+  --font-tech: "Michroma", "Eurostile", "Arial Black", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0F151A;
+    --bg-alt: #151C22;
+    --ink: #EEF1F4;
+    --ink-soft: #AEB7C0;
+    --blue-text: #8CB4DB;
+    --rule: #2A343D;
+    --grid: rgba(140,180,219,.08);
+    --panel: #151C22;
+    --up: #7DBE92;
+    --down: #E58A78;
+    --track: #232D35;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0F151A;
+  --bg-alt: #151C22;
+  --ink: #EEF1F4;
+  --ink-soft: #AEB7C0;
+  --blue-text: #8CB4DB;
+  --rule: #2A343D;
+  --grid: rgba(140,180,219,.08);
+  --panel: #151C22;
+  --up: #7DBE92;
+  --down: #E58A78;
+  --track: #232D35;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.65;
+  font-variant-numeric: lining-nums;
+  padding-inline: 20px;
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+a { color: var(--blue-text); }
+:focus-visible { outline: 3px solid var(--blue-text); outline-offset: 3px; }
+.lg-b { fill: var(--blue-text); } .lg-o { fill: var(--orange); } .lg-s { fill: var(--silver); }
+.dg-axis { stroke: var(--silver); } .dg-dash { stroke: var(--blue-text); opacity: .6; } .dg-dot { fill: var(--blue-text); } .dg-arc { stroke: var(--blue-text); }
+.dg-t text { fill: var(--ink-soft); } .dg-t text.b { fill: var(--blue-text); }
+.skip { position: absolute; left: 16px; top: -100px; z-index: 10; background: var(--ink); color: var(--bg); padding: 12px 18px; font-weight: 800; text-decoration: none; }
+.skip:focus { top: 8px; }
+.vh { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.wrap { max-width: 1080px; margin-inline: auto; }
+
+/* header */
+.site-header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  margin-inline: -20px; padding-inline: 20px;
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand svg { width: 34px; height: 34px; flex: none; }
+.brand-name { font-family: var(--font-tech); font-size: 15px; letter-spacing: .22em; line-height: 1; }
+.brand-sub { display: block; font-size: 9px; letter-spacing: .5em; color: var(--ink-soft); margin-top: 5px; font-family: var(--font-display); font-weight: 600; }
+nav { display: flex; gap: 26px; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--ink); text-decoration: none; border-bottom: 2px solid transparent; }
+nav a:hover { border-bottom-color: var(--orange); }
+@media (max-width: 720px) { nav a:not(.keep) { display: none; } nav { gap: 0; } }
+
+/* hero */
+.hero {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  margin-inline: -20px; padding-inline: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.hero .wrap { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; padding-block: 88px 96px; }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 36px; padding-block: 56px 64px; } }
+.eyebrow { font-family: var(--font-tech); font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--blue-text); margin: 0 0 22px; }
+h1 { font-size: clamp(38px, 6vw, 68px); line-height: 1.04; font-weight: 800; letter-spacing: -.01em; margin: 0 0 26px; text-wrap: balance; }
+h1 .o { color: var(--blue-text); }
+.lede { font-size: 19px; color: var(--ink-soft); max-width: 34em; margin: 0 0 32px; }
+.btn { display: inline-block; background: var(--btn-bg); color: var(--btn-ink); font-weight: 800; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; padding: 15px 26px; border-radius: 2px; }
+.btn:hover { filter: brightness(1.06); }
+.hero figure { margin: 0; }
+.hero svg { width: 100%; height: auto; display: block; }
+.hero figcaption { font-family: var(--font-tech); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+
+/* sections */
+section { padding-block: 88px; scroll-margin-top: 70px; }
+@media (max-width: 720px) { section { padding-block: 60px; } }
+.alt { background: var(--bg-alt); margin-inline: -20px; padding-inline: 20px; border-block: 1px solid var(--rule); }
+h2 { font-size: clamp(28px, 4vw, 40px); line-height: 1.12; font-weight: 800; margin: 0 0 20px; text-wrap: balance; }
+h3 { font-size: 18px; font-weight: 800; margin: 0 0 8px; letter-spacing: .01em; }
+.intro { max-width: 40em; color: var(--ink-soft); margin: 0 0 44px; }
+.split { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; gap: 24px; } }
+
+/* pillars */
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 2px solid var(--ink); }
+.pillar { padding: 24px 28px 8px 0; }
+.pillar + .pillar { padding-left: 28px; border-left: 1px solid var(--rule); }
+.pillar p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+.pillar .tag { font-family: var(--font-tech); font-size: 10px; letter-spacing: .24em; color: var(--blue-text); display: block; margin-bottom: 14px; }
+@media (max-width: 760px) {
+  .pillars { grid-template-columns: 1fr; }
+  .pillar, .pillar + .pillar { padding: 22px 0; border-left: 0; border-bottom: 1px solid var(--rule); }
+}
+
+/* shops */
+.shops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 8px; }
+@media (max-width: 860px) { .shops { grid-template-columns: 1fr; } }
+.slot { border: 1.5px dashed var(--silver); padding: 26px 24px; min-height: 172px; display: flex; flex-direction: column; justify-content: space-between; background: var(--bg); }
+.slot .kicker { font-family: var(--font-tech); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+.slot .nm { font-size: 20px; font-weight: 800; }
+.slot .nm small { display: block; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue-text); margin-bottom: 4px; }
+.slot .dom { font-size: 14px; color: var(--ink-soft); margin: 4px 0 0; }
+.shop-note { margin-top: 28px; max-width: 44em; color: var(--ink-soft); font-size: 16px; }
+
+/* about */
+.about-body p { margin: 0 0 18px; max-width: 40em; }
+.join { margin-top: 36px; padding: 26px 28px; border-left: 4px solid var(--orange); background: var(--bg-alt); max-width: 40em; }
+.join h3 { margin-bottom: 6px; }
+.join p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+/* contact */
+.contact-box { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: start; }
+@media (max-width: 860px) { .contact-box { grid-template-columns: 1fr; gap: 20px; } }
+.addr { font-family: var(--font-tech); font-size: 14px; letter-spacing: .06em; word-break: break-all; user-select: all; color: var(--blue-text); }
+
+footer { border-top: 1px solid var(--rule); padding-block: 30px 44px; font-size: 13px; color: var(--ink-soft); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; }
+
+/* ---------- CapEx dashboard page ---------- */
+.pagehead {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  margin-inline: -20px; padding-inline: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.pagehead .wrap { padding-block: 64px 40px; }
+.pagehead h1 { font-size: clamp(32px, 5vw, 52px); margin-bottom: 16px; }
+.pagehead .lede { font-size: 18px; margin-bottom: 26px; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 14px 40px; margin: 0; }
+.meta-row dt { font-family: var(--font-tech); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); }
+.meta-row dd { margin: 4px 0 0; font-family: var(--font-mono); font-size: 14px; font-weight: 600; }
+
+.dash .wrap > section { padding-block: 0; }
+.dash section { padding-block: 0; margin-top: 56px; }
+.dash h2.section-title { font-size: 24px; line-height: 1.25; margin: 0 0 8px; }
+.section-note { font-size: 15px; color: var(--ink-soft); margin: 0 0 20px; max-width: 46em; line-height: 1.6; }
+
+.notice { margin: 32px 0 0; padding: 14px 18px; background: var(--bg-alt); border-left: 4px solid var(--orange); font-size: 15px; }
+
+/* current reading */
+.reading { display: grid; grid-template-columns: 5fr 6fr; gap: 40px; align-items: start; }
+.dash .reading { margin-top: 40px; }
+@media (max-width: 860px) { .reading { grid-template-columns: 1fr; gap: 28px; } }
+.dash h2.eyebrow { font-family: var(--font-tech); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--blue-text); font-weight: 400; margin: 0 0 12px; line-height: 1.4; }
+.regime { font-family: var(--font-mono); font-size: clamp(30px, 4.4vw, 42px); font-weight: 600; color: var(--blue-text); line-height: 1.15; margin: 0 0 8px; }
+.regime-sub { margin: 0 0 12px; color: var(--ink-soft); font-size: 15px; line-height: 1.55; max-width: 34em; }
+.bignum { font-family: var(--font-display); margin: 24px 0 4px; font-size: 14px; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+.bignum span { font-family: var(--font-mono); font-size: 40px; letter-spacing: 0; color: var(--ink); font-weight: 600; margin-right: 8px; text-transform: none; }
+.reading-chart { margin: 0; background: var(--panel); border: 1px solid var(--rule); padding: 22px 22px 14px; }
+.reading-chart figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin-bottom: 10px; }
+.cap { font-weight: 800; font-size: 16px; }
+.capsub { font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft); }
+
+/* svg charts: all colour from tokens so both themes work */
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart .axis { stroke: var(--ink-soft); stroke-width: 1.5; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .bar { fill: var(--blue-text); }
+.chart .bar.latest, .chart .dot.peak { fill: var(--orange); stroke: var(--ink); stroke-width: 2; }
+.chart .stem { stroke: var(--blue-text); stroke-width: 2; }
+.chart .stem.peak { stroke: var(--ink); }
+.chart .dot { fill: var(--blue-text); }
+.chart text { font-family: var(--font-mono); }
+.chart .val { fill: var(--ink); font-size: 14px; }
+.chart .val.strong { font-weight: 600; font-size: 15px; }
+.chart .tick { fill: var(--ink-soft); font-size: 13px; }
+.chart .axislabel { fill: var(--ink-soft); font-size: 13px; font-family: var(--font-display); }
+
+.tableview { margin-top: 10px; font-size: 14px; }
+.tableview summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; color: var(--blue-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.tableview[open] summary { margin-bottom: 6px; }
+.mini { border-collapse: collapse; width: 100%; font-size: 14px; }
+.mini th, .mini td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--rule); }
+.mini td { font-family: var(--font-mono); }
+.mini thead th { font-size: 12px; color: var(--ink-soft); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+
+/* scorecard */
+.tscroll { overflow-x: auto; }
+.scorecard { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--rule); }
+.scorecard th, .scorecard td { padding: 14px 16px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.scorecard tbody tr:last-child > * { border-bottom: 0; }
+.scorecard thead th { background: var(--blue); color: #F7F8F9; font-family: var(--font-tech); font-size: 10px; text-transform: uppercase; letter-spacing: .14em; font-weight: 400; text-align: left; padding-block: 14px; }
+.scorecard .r { text-align: right; }
+.scorecard .c { text-align: center; }
+.scorecard tbody th { text-align: left; font-weight: 400; }
+.scorecard .nm { display: block; font-weight: 800; font-size: 16px; line-height: 1.35; }
+.scorecard .meta { display: block; font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); margin-top: 3px; line-height: 1.4; }
+.scorecard td.n { font-family: var(--font-mono); font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scorecard .per { display: block; font-family: var(--font-display); font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.scorecard td.chg { font-weight: 600; }
+.scorecard td.up { color: var(--up); }
+.scorecard td.down { color: var(--down); }
+.scorecard td.vec { text-align: center; padding-block: 6px; }
+.arr { display: block; margin-inline: auto; width: 96px; height: auto; }
+.arr.up { color: var(--blue-text); }
+.arr.down { color: var(--down); }
+.arr line { stroke: currentColor; stroke-width: 3.5; stroke-linecap: round; }
+.arr polygon, .arr circle { fill: currentColor; }
+.flag { display: inline-block; font-family: var(--font-mono); font-size: 11px; font-weight: 400; padding: 1px 7px; border: 1px solid var(--ink-soft); color: var(--ink-soft); margin-left: 8px; vertical-align: 2px; white-space: nowrap; }
+
+/* lower panels */
+.two-col { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; margin-top: 56px; }
+.two-col > section { margin-top: 0; }
+@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; gap: 48px; } }
+.panel { margin: 0; background: var(--panel); border: 1px solid var(--rule); padding: 22px; }
+.callout { margin: 18px 0 0; padding: 14px 16px; background: var(--bg-alt); border-left: 4px solid var(--orange); font-size: 15px; line-height: 1.55; }
+ol.beige { list-style: none; margin: 0; }
+.beige li { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.beige li:first-child { padding-top: 0; }
+.beige li:last-child { border-bottom: 0; padding-bottom: 0; }
+.beige time { font-family: var(--font-mono); font-size: 13px; color: var(--blue-text); font-weight: 600; }
+.beige p { margin: 4px 0 0; font-size: 15px; line-height: 1.55; }
+
+.notes { margin-top: 64px; border-top: 1px solid var(--rule); padding-top: 28px; }
+.dash .notes { padding-top: 28px; }
+.notes h2.section-title { font-size: 18px; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+@media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-grid ul { margin: 0; padding-left: 20px; }
+.footer-grid li { margin-bottom: 8px; }
+.corr-note { margin: 22px 0 0; padding: 14px 16px; border: 1px dashed var(--down); font-size: 14px; }
+.corr-note strong { color: var(--down); }
+
+footer { margin-top: 56px; }
+
+@media (max-width: 720px) {
+  .pagehead .wrap { padding-block: 44px 32px; }
+  .dash section { margin-top: 44px; }
+  .reading-chart, .panel { padding: 16px; }
+  .scorecard th, .scorecard td { padding: 12px 10px; }
+  .scorecard .nm { font-size: 15px; }
+  .scorecard td.n { font-size: 14px; }
+}
+@media (max-width: 600px) {
+  .col-prior { display: none; }
+  .arr { width: 60px; }
+  .scorecard td.vec { padding-inline: 4px; }
+  .scorecard th, .scorecard td { padding-inline: 8px; }
+  .scorecard thead th { letter-spacing: .06em; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html" aria-label="Truvector Industries, home"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><polygon class="lg-b" points="3,5 37,5 20,37"/><polygon class="lg-o" points="20,5 37,5 26.5,23"/><polygon class="lg-s" points="13,5 21,5 20,20"/></svg><span><span class="brand-name">TRUVECTOR</span><span class="brand-sub">INDUSTRIES</span></span></a><nav aria-label="Primary"><a class="keep" href="index.html">&larr; Home</a></nav></div></header>
+<main id="main" class="dash" tabindex="-1">
+  <div class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow">Industrial &amp; Capital Markets Research</p>
+      <h1>U.S. CapEx &amp; Industrial Demand</h1>
+      <p class="lede">Reading the national capital-spending cycle as a demand signal for precision manufacturing.</p>
+      <dl class="meta-row">
+        <div><dt>Data refreshed</dt><dd><time datetime="2026-09-03">Sep 3, 2026</time></dd></div>
+        <div><dt>Hand-entered figures approved</dt><dd><time datetime="2026-09-03">Sep 3, 2026</time></dd></div>
+        <div><dt>Sources</dt><dd>FRED, ISM, AMT, SF Fed</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="wrap">
+    
+    <section class="reading" aria-labelledby="reading-h">
+      <div class="reading-text">
+        <h2 id="reading-h" class="eyebrow">Current reading</h2>
+        <p class="regime">Expansion</p>
+        <p class="regime-sub">5 straight quarters of accelerating investment.</p>
+        <p class="regime-sub">Investment growth is measured as private nonresidential fixed investment (<abbr title="Private nonresidential fixed investment">PNFI</abbr>), up +9.9% from a year earlier.</p>
+        <p class="bignum"><span>0.84</span> peak correlation</p>
+        <p class="regime-sub">Core orders lead investment by 1 quarter (n&nbsp;=&nbsp;133).</p>
+      </div>
+      <figure class="reading-chart">
+        <figcaption><span class="cap">Investment growth, year over year</span><span class="capsub">Last 6 quarters</span></figcaption>
+        <svg viewBox="0 0 460 230" role="img" aria-labelledby="pn-t pn-d" class="chart">
+<title id="pn-t">Private nonresidential fixed investment, year-over-year growth by quarter</title>
+<desc id="pn-d">Q1 2025 +2.7%; Q2 2025 +4.4%; Q3 2025 +4.9%; Q4 2025 +5.5%; Q1 2026 +7.9%; Q2 2026 +9.9%.</desc>
+<line class="axis" x1="12" x2="448" y1="184.0" y2="184.0" />
+<g><title>Q1 2025: +2.7%</title><rect class="bar" x="33.3" y="143.1" width="30.0" height="40.9" rx="3" /></g>
+<text class="val" x="48.3" y="135.1" text-anchor="middle">+2.7%</text>
+<text class="tick" x="48.3" y="206" text-anchor="middle">Q1</text><text class="tick" x="48.3" y="222" text-anchor="middle">2025</text>
+<g><title>Q2 2025: +4.4%</title><rect class="bar" x="106.0" y="117.3" width="30.0" height="66.7" rx="3" /></g>
+<text class="val" x="121.0" y="109.3" text-anchor="middle">+4.4%</text>
+<text class="tick" x="121.0" y="206" text-anchor="middle">Q2</text><text class="tick" x="121.0" y="222" text-anchor="middle">2025</text>
+<g><title>Q3 2025: +4.9%</title><rect class="bar" x="178.7" y="109.8" width="30.0" height="74.2" rx="3" /></g>
+<text class="val" x="193.7" y="101.8" text-anchor="middle">+4.9%</text>
+<text class="tick" x="193.7" y="206" text-anchor="middle">Q3</text><text class="tick" x="193.7" y="222" text-anchor="middle">2025</text>
+<g><title>Q4 2025: +5.5%</title><rect class="bar" x="251.3" y="100.7" width="30.0" height="83.3" rx="3" /></g>
+<text class="val" x="266.3" y="92.7" text-anchor="middle">+5.5%</text>
+<text class="tick" x="266.3" y="206" text-anchor="middle">Q4</text><text class="tick" x="266.3" y="222" text-anchor="middle">2025</text>
+<g><title>Q1 2026: +7.9%</title><rect class="bar" x="324.0" y="64.3" width="30.0" height="119.7" rx="3" /></g>
+<text class="val" x="339.0" y="56.3" text-anchor="middle">+7.9%</text>
+<text class="tick" x="339.0" y="206" text-anchor="middle">Q1</text><text class="tick" x="339.0" y="222" text-anchor="middle">2026</text>
+<g><title>Q2 2026: +9.9%</title><rect class="bar latest" x="396.7" y="34.0" width="30.0" height="150.0" rx="3" /></g>
+<text class="val strong" x="411.7" y="26.0" text-anchor="middle">+9.9%</text>
+<text class="tick" x="411.7" y="206" text-anchor="middle">Q2</text><text class="tick" x="411.7" y="222" text-anchor="middle">2026</text>
+</svg>
+        <details class='tableview'><summary>View as table</summary><div class='tscroll' role='region' aria-label='PNFI growth table' tabindex='0'><table class='mini'><caption class='vh'>PNFI year-over-year growth by quarter</caption><thead><tr><th scope='col'>Quarter</th><th scope='col'>YoY growth</th></tr></thead><tbody><tr><th scope='row'>Q1 2025</th><td>+2.7%</td></tr><tr><th scope='row'>Q2 2025</th><td>+4.4%</td></tr><tr><th scope='row'>Q3 2025</th><td>+4.9%</td></tr><tr><th scope='row'>Q4 2025</th><td>+5.5%</td></tr><tr><th scope='row'>Q1 2026</th><td>+7.9%</td></tr><tr><th scope='row'>Q2 2026</th><td>+9.9%</td></tr></tbody></table></div></details>
+      </figure>
+    </section>
+
+    <section aria-labelledby="scorecard-h">
+      <h2 id="scorecard-h" class="section-title">Executive scorecard</h2>
+      <p class="section-note">Latest reading against the same period a year earlier. Each arrow is a vector: it points up or down with the direction of change, and grows longer and steeper as the change grows (capped at &plusmn;40%). <span class="flag">hand-entered</span> rows are typed in and approved manually rather than pulled by machine, so treat their trend with more caution.</p>
+      <div class="tscroll" role="region" aria-labelledby="scorecard-h" tabindex="0">
+        <table class="scorecard">
+          <caption class="vh">Indicators: latest reading, year-earlier reading, change, and direction</caption>
+          <thead><tr>
+            <th scope="col">Indicator</th><th scope="col" class="r">Latest</th><th scope="col" class="r col-prior">Year earlier</th>
+            <th scope="col" class="r"><abbr title="Year over year">YoY</abbr> change</th><th scope="col" class="c">Vector</th>
+          </tr></thead>
+          <tbody>
+            <tr><th scope='row'><span class='nm'>Core capital-goods orders</span><span class='meta'>Leading &middot; FRED NEWORDER</span><span class='meta'>$ millions</span></th><td class='n'>85,716<span class='per'></span></td><td class='n col-prior'>76,154<span class='per'></span></td><td class='n chg up'><span class='vh'>up </span>+12.6%</td><td class='vec'><svg class="arr up" viewBox="0 0 72 48" aria-hidden="true" focusable="false"><line x1="8.0" y1="24.0" x2="30.5" y2="19.5" /><polygon points="39.3,17.7 31.5,24.4 29.5,14.6" /><circle cx="8.0" cy="24.0" r="3.5" /></svg></td></tr>
+<tr><th scope='row'><span class='nm'>Unfilled capital-goods orders</span><span class='meta'>Coincident / leading &middot; FRED ANXAUO</span><span class='meta'>$ millions</span></th><td class='n'>313,807<span class='per'></span></td><td class='n col-prior'>300,273<span class='per'></span></td><td class='n chg up'><span class='vh'>up </span>+4.5%</td><td class='vec'><svg class="arr up" viewBox="0 0 72 48" aria-hidden="true" focusable="false"><line x1="8.0" y1="24.0" x2="23.1" y2="22.6" /><polygon points="32.1,21.7 23.6,27.6 22.6,17.6" /><circle cx="8.0" cy="24.0" r="3.5" /></svg></td></tr>
+<tr><th scope='row'><span class='nm'>Defense capital-goods orders</span><span class='meta'>Leading, noisy &middot; FRED UDEFNO</span><span class='meta'>$ millions, not seasonally adjusted</span></th><td class='n'>18,388<span class='per'></span></td><td class='n col-prior'>11,600<span class='per'></span></td><td class='n chg up'><span class='vh'>up </span>+58.5%</td><td class='vec'><svg class="arr up" viewBox="0 0 72 48" aria-hidden="true" focusable="false"><line x1="8.0" y1="24.0" x2="55.5" y2="7.0" /><polygon points="64.0,4.0 57.2,11.7 53.8,2.3" /><circle cx="8.0" cy="24.0" r="3.5" /></svg></td></tr>
+<tr><th scope='row'><span class='nm'>Private nonresidential fixed investment</span><span class='meta'>Lagging, the benchmark &middot; FRED PNFI</span><span class='meta'>$ billions, annual rate</span></th><td class='n'>4,623.4<span class='per'></span></td><td class='n col-prior'>4,207.5<span class='per'></span></td><td class='n chg up'><span class='vh'>up </span>+9.9%</td><td class='vec'><svg class="arr up" viewBox="0 0 72 48" aria-hidden="true" focusable="false"><line x1="8.0" y1="24.0" x2="28.0" y2="20.6" /><polygon points="36.9,19.1 28.9,25.5 27.2,15.6" /><circle cx="8.0" cy="24.0" r="3.5" /></svg></td></tr>
+<tr><th scope='row'><span class='nm'>ISM Manufacturing PMI<span class='flag'>hand-entered</span></span><span class='meta'>Leading, fastest &middot; ismworld.org</span><span class='meta'>index, 50 = no change</span></th><td class='n'>54.6<span class='per'></span></td><td class='n col-prior'>48.7<span class='per'></span></td><td class='n chg up'><span class='vh'>up </span>+12.1%</td><td class='vec'><svg class="arr up" viewBox="0 0 72 48" aria-hidden="true" focusable="false"><line x1="8.0" y1="24.0" x2="30.1" y2="19.7" /><polygon points="38.9,17.9 31.0,24.6 29.1,14.8" /><circle cx="8.0" cy="24.0" r="3.5" /></svg></td></tr>
+<tr><th scope='row'><span class='nm'>Machine tool orders<span class='flag'>hand-entered</span></span><span class='meta'>Leading, most direct &middot; AMT USMTO</span><span class='meta'>$ millions</span></th><td class='n'>672.7<span class='per'></span></td><td class='n col-prior'>429.0<span class='per'></span></td><td class='n chg up'><span class='vh'>up </span>+56.8%</td><td class='vec'><svg class="arr up" viewBox="0 0 72 48" aria-hidden="true" focusable="false"><line x1="8.0" y1="24.0" x2="55.5" y2="7.0" /><polygon points="64.0,4.0 57.2,11.7 53.8,2.3" /><circle cx="8.0" cy="24.0" r="3.5" /></svg></td></tr>
+<tr><th scope='row'><span class='nm'>Manufacturing capacity utilization</span><span class='meta'>Coincident &middot; FRED MCUMFN</span><span class='meta'>% of capacity</span></th><td class='n'>76.0<span class='per'></span></td><td class='n col-prior'>75.9<span class='per'></span></td><td class='n chg up'><span class='vh'>up </span>+0.1%</td><td class='vec'><svg class="arr up" viewBox="0 0 72 48" aria-hidden="true" focusable="false"><line x1="8.0" y1="24.0" x2="19.1" y2="24.0" /><polygon points="28.1,23.9 19.1,29.0 19.1,19.0" /><circle cx="8.0" cy="24.0" r="3.5" /></svg></td></tr>
+<tr><th scope='row'><span class='nm'>Manufacturing employment, Seattle metro</span><span class='meta'>Lagging, contrary &middot; FRED SEAT653MFGN</span><span class='meta'>thousands of jobs</span></th><td class='n'>168.5<span class='per'></span></td><td class='n col-prior'>163.7<span class='per'></span></td><td class='n chg up'><span class='vh'>up </span>+2.9%</td><td class='vec'><svg class="arr up" viewBox="0 0 72 48" aria-hidden="true" focusable="false"><line x1="8.0" y1="24.0" x2="21.7" y2="23.1" /><polygon points="30.6,22.5 22.0,28.1 21.3,18.1" /><circle cx="8.0" cy="24.0" r="3.5" /></svg></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <section aria-labelledby="ll-h">
+        <h2 id="ll-h" class="section-title">Orders lead investment</h2>
+        <p class="section-note">Core capital-goods orders (NEWORDER) growth correlated against investment growth at 0&ndash;4 quarter leads, 1992 Q1 – 2026 Q2 (134 quarters).</p>
+        <figure class="panel">
+          <svg viewBox="0 0 460 270" role="img" aria-labelledby="ll-t ll-d" class="chart">
+<title id="ll-t">Correlation between core orders growth and investment growth at 0 to 4 quarter leads</title>
+<desc id="ll-d">0-quarter lead r = 0.77; 1-quarter lead r = 0.84; 2-quarter lead r = 0.80; 3-quarter lead r = 0.68; 4-quarter lead r = 0.51. Strongest at a 1-quarter lead.</desc>
+<line class="axis" x1="52" x2="444" y1="208.0" y2="208.0" />
+<text class="tick" x="44" y="212.0" text-anchor="end">0.00</text>
+<line class="grid" x1="52" x2="444" y1="163.5" y2="163.5" />
+<text class="tick" x="44" y="167.5" text-anchor="end">0.25</text>
+<line class="grid" x1="52" x2="444" y1="119.0" y2="119.0" />
+<text class="tick" x="44" y="123.0" text-anchor="end">0.50</text>
+<line class="grid" x1="52" x2="444" y1="74.5" y2="74.5" />
+<text class="tick" x="44" y="78.5" text-anchor="end">0.75</text>
+<line class="grid" x1="52" x2="444" y1="30.0" y2="30.0" />
+<text class="tick" x="44" y="34.0" text-anchor="end">1.00</text>
+<g><title>Same quarter: r = 0.773 (n = 134)</title><line class="stem" x1="91.2" x2="91.2" y1="208.0" y2="70.4" /><circle class="dot" cx="91.2" cy="70.4" r="6" /></g>
+<text class="val" x="91.2" y="56.4" text-anchor="middle">0.77</text>
+<text class="tick" x="91.2" y="240" text-anchor="middle">Same qtr</text>
+<g><title>1-quarter lead: r = 0.842 (n = 133)</title><line class="stem peak" x1="169.6" x2="169.6" y1="208.0" y2="58.1" /><circle class="dot peak" cx="169.6" cy="58.1" r="8" /></g>
+<text class="val strong" x="169.6" y="44.1" text-anchor="middle">0.84</text>
+<text class="tick" x="169.6" y="240" text-anchor="middle">1Q lead</text>
+<g><title>2-quarter lead: r = 0.800 (n = 132)</title><line class="stem" x1="248.0" x2="248.0" y1="208.0" y2="65.6" /><circle class="dot" cx="248.0" cy="65.6" r="6" /></g>
+<text class="val" x="248.0" y="51.6" text-anchor="middle">0.80</text>
+<text class="tick" x="248.0" y="240" text-anchor="middle">2Q lead</text>
+<g><title>3-quarter lead: r = 0.677 (n = 131)</title><line class="stem" x1="326.4" x2="326.4" y1="208.0" y2="87.5" /><circle class="dot" cx="326.4" cy="87.5" r="6" /></g>
+<text class="val" x="326.4" y="73.5" text-anchor="middle">0.68</text>
+<text class="tick" x="326.4" y="240" text-anchor="middle">3Q lead</text>
+<g><title>4-quarter lead: r = 0.505 (n = 130)</title><line class="stem" x1="404.8" x2="404.8" y1="208.0" y2="118.1" /><circle class="dot" cx="404.8" cy="118.1" r="6" /></g>
+<text class="val" x="404.8" y="104.1" text-anchor="middle">0.51</text>
+<text class="tick" x="404.8" y="240" text-anchor="middle">4Q lead</text>
+<text class="axislabel" x="248.0" y="262" text-anchor="middle">Quarters orders lead investment</text>
+</svg>
+          <details class='tableview'><summary>View as table</summary><div class='tscroll' role='region' aria-label='Lead-lag table' tabindex='0'><table class='mini'><caption class='vh'>Correlation of orders growth with investment growth</caption><thead><tr><th scope='col'>Lead</th><th scope='col'>Correlation (r)</th><th scope='col'>Quarters (n)</th></tr></thead><tbody><tr><th scope='row'>Same quarter</th><td>0.773</td><td>134</td></tr><tr><th scope='row'>1-quarter lead</th><td>0.842</td><td>133</td></tr><tr><th scope='row'>2-quarter lead</th><td>0.800</td><td>132</td></tr><tr><th scope='row'>3-quarter lead</th><td>0.677</td><td>131</td></tr><tr><th scope='row'>4-quarter lead</th><td>0.505</td><td>130</td></tr></tbody></table></div></details>
+          <p class="callout">Best fit: <strong>1-quarter lead, r&nbsp;=&nbsp;0.84</strong>. Orders move first; business investment follows.</p>
+        </figure>
+      </section>
+      <section aria-labelledby="bb-h">
+        <h2 id="bb-h" class="section-title">Regional: PNW Beige Book</h2>
+        <p class="section-note">SF Fed Twelfth District, capital-equipment commentary.</p>
+        <ol class="beige panel"><li><time datetime='2025-07'>Jul 2025</time><p>Uncertainty was causing businesses to defer capital spending and put projects on hold.</p></li><li><time datetime='2026-01'>Jan 2026</time><p>Demand for large capital equipment slowed overall, though packaging machinery remained strong; utilities were investing in infrastructure capacity.</p></li><li><time datetime='2026-02'>Feb 2026</time><p>Capital-equipment order pipelines improved; renewed interest in robotics/automation; businesses still dealing with considerable uncertainty.</p></li><li><time datetime='2026-05'>May 2026</time><p>Demand for capital equipment stable or increasing; customers making cost-saving investments and executing previously delayed purchases.</p></li><li><time datetime='2026-07'>Jul 2026</time><p>Manufacturing activity rising modestly; continued investment in productivity-enhancing AI technologies.</p></li></ol>
+      </section>
+    </div>
+
+    <section class="notes" aria-labelledby="notes-h">
+      <h2 id="notes-h" class="section-title">Sources &amp; limits</h2>
+      <div class="footer-grid">
+        <ul>
+          <li>NEWORDER, ANXAUO, UDEFNO, PNFI, MCUMFN, SEAT653MFGN: Federal Reserve Economic Data (FRED), full history, refreshed automatically every Monday.</li>
+          <li>ISM Manufacturing PMI (ismworld.org) and machine tool orders (AMT USMTO): single year-over-year comparison, entered by hand and approved before publishing.</li>
+          <li>Beige Book excerpts: SF Fed Twelfth District, entered by hand.</li>
+        </ul>
+        <ul>
+          <li>Defense orders (not seasonally adjusted) swing 30&ndash;40% month to month on single large program awards. Don't read one month as a trend.</li>
+          <li>Year-over-year correlation between two upward-trending series can overstate true predictive power. No trend-controlled regression has been run.</li>
+          <li>The SF Fed's 0.74 sentiment-index correlation remains unverified and is not tested here.</li>
+        </ul>
+      </div>
+      <p class="corr-note"><strong>Data-quality note:</strong> PNW manufacturing employment was corrected after an earlier transcription error inverted its trend. Verify any employment figures reused elsewhere against FRED directly.</p>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap"><span>&copy; 2026 Truvector Industries. All rights reserved.</span><span>Precision. Partnership. Progress.</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "approved": "2026-09-03",
+  "indicators": {
+    "ISM_PMI": {"latest": 54.6, "latest_period": "", "prior": 48.7, "prior_period": "", "source": "ismworld.org"},
+    "USMTO":   {"latest": 672.7, "latest_period": "", "prior": 429.0, "prior_period": "", "source": "AMT USMTO report"}
+  },
+  "beige": [
+    {"date": "Jul 2025", "iso": "2025-07", "text": "Uncertainty was causing businesses to defer capital spending and put projects on hold."},
+    {"date": "Jan 2026", "iso": "2026-01", "text": "Demand for large capital equipment slowed overall, though packaging machinery remained strong; utilities were investing in infrastructure capacity."},
+    {"date": "Feb 2026", "iso": "2026-02", "text": "Capital-equipment order pipelines improved; renewed interest in robotics/automation; businesses still dealing with considerable uncertainty."},
+    {"date": "May 2026", "iso": "2026-05", "text": "Demand for capital equipment stable or increasing; customers making cost-saving investments and executing previously delayed purchases."},
+    {"date": "Jul 2026", "iso": "2026-07", "text": "Manufacturing activity rising modestly; continued investment in productivity-enhancing AI technologies."}
+  ]
+}
