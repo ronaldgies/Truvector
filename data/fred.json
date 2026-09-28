@@ -1,26 +1,26 @@
 {
-  "generated": "2026-09-23",
+  "generated": "2026-09-28",
   "series": {
     "NEWORDER": {
       "freq": "M",
-      "latest": 85716.0,
-      "latest_date": "2026-07-01",
-      "prior": 76154.0,
-      "prior_date": "2025-07-01"
+      "latest": 87629.0,
+      "latest_date": "2026-08-01",
+      "prior": 76806.0,
+      "prior_date": "2025-08-01"
     },
     "ANXAUO": {
       "freq": "M",
-      "latest": 313807.0,
-      "latest_date": "2026-07-01",
-      "prior": 300273.0,
-      "prior_date": "2025-07-01"
+      "latest": 316821.0,
+      "latest_date": "2026-08-01",
+      "prior": 300771.0,
+      "prior_date": "2025-08-01"
     },
     "UDEFNO": {
       "freq": "M",
-      "latest": 18388.0,
-      "latest_date": "2026-07-01",
-      "prior": 11600.0,
-      "prior_date": "2025-07-01"
+      "latest": 19176.0,
+      "latest_date": "2026-08-01",
+      "prior": 14564.0,
+      "prior_date": "2025-08-01"
     },
     "PNFI": {
       "freq": "Q",
