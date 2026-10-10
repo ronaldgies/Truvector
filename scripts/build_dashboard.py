@@ -278,7 +278,7 @@ def build():
       </div>
       <figure class="mark-fig">
         <svg viewBox="0 0 560 450" role="img" aria-label="The Truvector vector mark set inside a coordinate grid, with a trajectory line showing direction and magnitude"><use href="#tv-hero"/></svg>
-        <figcaption>Precision. Partnership. Progress.</figcaption>
+        <figcaption>Precision. Partnership.<br>Progress.</figcaption>
       </figure>
     </div>
   </div>
