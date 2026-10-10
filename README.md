@@ -36,3 +36,7 @@ GitHub emails the repository owner. The job refuses to publish stale, missing or
 data and leaves the previous page in place, so a failure never puts bad numbers on the site.
 Open the **Actions** tab to read the error. The most common cause is a missing or expired
 `FRED_API_KEY` secret.
+
+## Brand mark
+
+`templates/mark.html` holds the shared SVG definitions (detailed Vector mark and hero construction). The dashboard builder embeds it automatically. `public/index.html` carries a pasted copy, so if you change the mark, update both. Page colour is a Machined Silver (#A6ABB1) gradient set in `templates/site.css`.

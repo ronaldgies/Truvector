@@ -170,6 +170,7 @@ def leadlag_table(results):
 def build():
     fred, manual = load("fred.json"), load("manual.json")
     css = (ROOT / "templates" / "site.css").read_text() + (ROOT / "templates" / "dashboard.css").read_text()
+    mark_defs = (ROOT / "templates" / "mark.html").read_text()
 
     # rows
     rows_html = []
@@ -238,8 +239,7 @@ def build():
     header = ('<a class="skip" href="#main">Skip to main content</a>\n'
               '<header class="site-header"><div class="wrap">'
               '<a class="brand" href="index.html" aria-label="Truvector Industries, home">'
-              '<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><polygon class="lg-b" points="3,5 37,5 20,37"/>'
-              '<polygon class="lg-o" points="20,5 37,5 26.5,23"/><polygon class="lg-s" points="13,5 21,5 20,20"/></svg>'
+              '<svg viewBox="0 0 412 304" aria-hidden="true" focusable="false"><use href="#tv-mark"/></svg>'
               '<span><span class="brand-name">TRUVECTOR</span><span class="brand-sub">INDUSTRIES</span></span></a>'
               '<nav aria-label="Primary"><a class="keep" href="index.html">&larr; Home</a></nav></div></header>')
 
@@ -252,6 +252,7 @@ def build():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>CapEx &amp; Industrial Demand | Truvector Industries</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -260,18 +261,25 @@ def build():
 {css}</style>
 </head>
 <body>
+{mark_defs}
 {header}
 <main id="main" class="dash" tabindex="-1">
   <div class="pagehead">
     <div class="wrap">
-      <p class="eyebrow">Industrial &amp; Capital Markets Research</p>
-      <h1>U.S. CapEx &amp; Industrial Demand</h1>
-      <p class="lede">Reading the national capital-spending cycle as a demand signal for precision manufacturing.</p>
-      <dl class="meta-row">
-        <div><dt>Data refreshed</dt><dd><time datetime="{esc(fred['generated'])}">{pretty_date(fred['generated'])}</time></dd></div>
-        <div><dt>Hand-entered figures approved</dt><dd><time datetime="{esc(manual['approved'])}">{pretty_date(manual['approved'])}</time></dd></div>
-        <div><dt>Sources</dt><dd>FRED, ISM, AMT, SF Fed</dd></div>
-      </dl>
+      <div>
+        <p class="eyebrow">Industrial &amp; Capital Markets Research</p>
+        <h1>U.S. CapEx &amp; Industrial Demand</h1>
+        <p class="lede">Reading the national capital-spending cycle as a demand signal for precision manufacturing.</p>
+        <dl class="meta-row">
+          <div><dt>Data refreshed</dt><dd><time datetime="{esc(fred['generated'])}">{pretty_date(fred['generated'])}</time></dd></div>
+          <div><dt>Hand-entered figures approved</dt><dd><time datetime="{esc(manual['approved'])}">{pretty_date(manual['approved'])}</time></dd></div>
+          <div><dt>Sources</dt><dd>FRED, ISM, AMT, SF Fed</dd></div>
+        </dl>
+      </div>
+      <figure class="mark-fig">
+        <svg viewBox="0 0 560 450" role="img" aria-label="The Truvector vector mark set inside a coordinate grid, with a trajectory line showing direction and magnitude"><use href="#tv-hero"/></svg>
+        <figcaption>Direction. Magnitude. Signal.</figcaption>
+      </figure>
     </div>
   </div>
 

@@ -1,0 +1,87 @@
+<svg class="mark-defs" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <linearGradient id="tvNavy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2B5379"/>
+      <stop offset=".45" stop-color="#1C3F5E"/>
+      <stop offset="1" stop-color="#11161A"/>
+    </linearGradient>
+    <linearGradient id="tvNavy2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1C3F5E"/>
+      <stop offset="1" stop-color="#11161A"/>
+    </linearGradient>
+    <linearGradient id="tvOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8C4A"/>
+      <stop offset=".55" stop-color="#F26C21"/>
+      <stop offset="1" stop-color="#D9560F"/>
+    </linearGradient>
+    <linearGradient id="tvSilver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E4E7EA"/>
+      <stop offset=".35" stop-color="#A6ABB1"/>
+      <stop offset=".7" stop-color="#C3C7CC"/>
+      <stop offset="1" stop-color="#7C828A"/>
+    </linearGradient>
+    <linearGradient id="tvSheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Vector mark (Concept 1), drawn in the coordinate space of the approved logo file. -->
+    <symbol id="tv-mark" viewBox="240 172 412 304">
+      <!-- navy T / V body (traced from the approved logo file) -->
+      <polygon fill="url(#tvNavy)" points="247,182 512,182 481,238 403,238 441,304 411,358 341,240 279,237"/>
+      <polygon fill="url(#tvSheen)" points="247,182 512,182 504,198 256,198"/>
+      <polygon fill="#000" opacity=".2" points="403,238 441,304 411,358 392,324"/>
+      <polyline fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="1.5" stroke-linejoin="round" points="247,182 512,182"/>
+      <!-- fine machining lines across the bar -->
+      <g stroke="#fff" stroke-opacity=".16" stroke-width="1" fill="none">
+        <line x1="264" y1="208" x2="494" y2="208"/>
+        <line x1="274" y1="224" x2="487" y2="224"/>
+      </g>
+      <!-- signal orange blade -->
+      <polygon fill="url(#tvOrange)" points="566,182 643,182 611,237 536,237"/>
+      <polygon fill="url(#tvSheen)" points="566,182 643,182 637,192 560,192"/>
+      <!-- navy tail beneath the blade -->
+      <polygon fill="url(#tvNavy2)" points="537,240 611,240 570,299"/>
+      <polygon fill="#fff" opacity=".10" points="537,240 611,240 604,253 544,253"/>
+      <!-- machined silver chevron -->
+      <polygon fill="url(#tvSilver)" points="515,268 551,334 469,466 424,381 453,332 469,351"/>
+      <polygon fill="#000" opacity=".13" points="515,268 551,334 469,466 495,375"/>
+      <polygon fill="#fff" opacity=".24" points="424,381 453,332 469,351 515,268 497,268 466,326 452,311 416,370"/>
+      <polyline fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round" points="424,381 453,332 469,351 515,268"/>
+    </symbol>
+
+    <!-- Hero figure: the mark inside a precision / coordinate construction. -->
+    <symbol id="tv-hero" viewBox="0 0 560 450">
+      <g class="dg-ring" fill="none" stroke-width="1">
+        <circle cx="280" cy="222" r="206" stroke-dasharray="2 7"/>
+        <circle cx="280" cy="222" r="160"/>
+        <circle cx="280" cy="222" r="112" stroke-dasharray="5 5"/>
+      </g>
+      <g class="dg-axis" fill="none" stroke-width="1">
+        <line x1="20" y1="222" x2="540" y2="222"/>
+        <line x1="280" y1="14" x2="280" y2="424"/>
+      </g>
+      <!-- ruler -->
+      <g class="dg-axis" stroke-width="1">
+        <path d="M60 438v-7M80 438v-4M100 438v-4M120 438v-7M140 438v-4M160 438v-4M180 438v-7M200 438v-4M220 438v-4M240 438v-7M260 438v-4M280 438v-10M300 438v-4M320 438v-4M340 438v-7M360 438v-4M380 438v-4M400 438v-7M420 438v-4M440 438v-4M460 438v-7M480 438v-4M500 438v-4"/>
+        <line x1="50" y1="438" x2="510" y2="438"/>
+      </g>
+      <!-- registration crosses -->
+      <g class="dg-axis" stroke-width="1.2" fill="none">
+        <path d="M30 30h16M38 22v16"/><path d="M514 30h16M522 22v16"/>
+      </g>
+      <!-- trajectory vector, drawn behind the mark: silver tip to beyond the orange blade -->
+      <line x1="307" y1="369" x2="490" y2="62" stroke="#F26C21" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round"/>
+      <polygon points="500,45 496,66 484,58" fill="#F26C21"/>
+      <!-- the mark -->
+      <use href="#tv-mark" x="75" y="74" width="410" height="304"/>
+      <circle class="dg-dot" cx="307" cy="369" r="5"/>
+      <path class="dg-arc" d="M 307 309 A 60 60 0 0 1 337.7 317.5" fill="none" stroke-width="1.5"/>
+      <g class="dg-t" font-family="Michroma, Arial, sans-serif" font-size="11" letter-spacing="2">
+        <text x="195" y="420">MAGNITUDE</text>
+        <text class="b" x="378" y="36">DIRECTION</text>
+        <text x="52" y="46">TRUE NORTH</text>
+      </g>
+    </symbol>
+  </defs>
+</svg>

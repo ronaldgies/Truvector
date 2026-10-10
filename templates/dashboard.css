@@ -8,7 +8,11 @@
   margin-inline: -20px; padding-inline: 20px;
   border-bottom: 1px solid var(--rule);
 }
-.pagehead .wrap { padding-block: 64px 40px; }
+.pagehead .wrap { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: center; padding-block: 56px 40px; }
+.pagehead .mark-fig { margin: 0; }
+.pagehead .mark-fig svg { width: 100%; height: auto; display: block; }
+.mark-fig figcaption { text-align: center; }
+@media (max-width: 860px) { .pagehead .wrap { grid-template-columns: 1fr; } .pagehead .mark-fig { display: none; } }
 .pagehead h1 { font-size: clamp(32px, 5vw, 52px); margin-bottom: 16px; }
 .pagehead .lede { font-size: 18px; margin-bottom: 26px; }
 .meta-row { display: flex; flex-wrap: wrap; gap: 14px 40px; margin: 0; }
