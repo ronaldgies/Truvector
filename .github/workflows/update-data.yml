@@ -57,4 +57,5 @@ jobs:
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-        run: python scripts/notify.py "CapEx update FAILED" "The dashboard update job failed. The previous page is still live. See the Actions tab: ${{ github.server_url }}/${{ github.repository }}/actions"
+        run: |
+          python scripts/notify.py "CapEx update FAILED" "The dashboard update job failed. The previous page is still live. Details: ${{ github.server_url }}/${{ github.repository }}/actions"
