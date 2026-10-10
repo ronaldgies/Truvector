@@ -40,3 +40,7 @@ Open the **Actions** tab to read the error. The most common cause is a missing o
 ## Brand mark
 
 `templates/mark.html` holds the shared SVG definitions (detailed Vector mark and hero construction). The dashboard builder embeds it automatically. `public/index.html` carries a pasted copy, so if you change the mark, update both. Page colour is a Machined Silver (#A6ABB1) gradient set in `templates/site.css`.
+
+## Email notifications
+
+`scripts/notify.py` emails status messages: a Cloudflare publish result (`notify-deploy.yml`) and weekly-job failures (`update-data.yml`). The recipient is the repository **variable** `NOTIFY_EMAIL`. To change the address, edit that variable in GitHub (Settings, Secrets and variables, Actions, Variables). Sending needs four **secrets**: `SMTP_SERVER`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`. Until they are set, the step skips quietly.

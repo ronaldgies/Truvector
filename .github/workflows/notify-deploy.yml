@@ -1,0 +1,36 @@
+name: Email on site deploy
+
+# Cloudflare Pages reports each publish back to GitHub as a "deployment status".
+# This emails the result (published or failed) to the address in the NOTIFY_EMAIL variable.
+on:
+  deployment_status
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: github.event.deployment_status.state == 'success' || github.event.deployment_status.state == 'failure' || github.event.deployment_status.state == 'error'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Send email
+        env:
+          NOTIFY_EMAIL: ${{ vars.NOTIFY_EMAIL }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          STATE: ${{ github.event.deployment_status.state }}
+          ENV_NAME: ${{ github.event.deployment.environment }}
+          URL: ${{ github.event.deployment_status.environment_url }}
+          SHA: ${{ github.event.deployment.sha }}
+        run: |
+          python scripts/notify.py "Deploy ${STATE}: ${ENV_NAME}" "Cloudflare Pages deploy state: ${STATE}
+          Environment: ${ENV_NAME}
+          Commit: ${SHA}
+          URL: ${URL}"
