@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05",
+  "generated": "2026-10-19",
   "series": {
     "NEWORDER": {
       "freq": "M",
@@ -31,10 +31,10 @@
     },
     "MCUMFN": {
       "freq": "M",
-      "latest": 75.731,
-      "latest_date": "2026-08-01",
-      "prior": 75.801,
-      "prior_date": "2025-08-01"
+      "latest": 75.924,
+      "latest_date": "2026-09-01",
+      "prior": 75.692,
+      "prior_date": "2025-09-01"
     },
     "SEAT653MFGN": {
       "freq": "M",
