@@ -1,33 +1,33 @@
 {
-  "generated": "2026-10-26",
+  "generated": "2026-11-02",
   "series": {
     "NEWORDER": {
       "freq": "M",
-      "latest": 87640.0,
-      "latest_date": "2026-08-01",
-      "prior": 76806.0,
-      "prior_date": "2025-08-01"
+      "latest": 88039.0,
+      "latest_date": "2026-09-01",
+      "prior": 77591.0,
+      "prior_date": "2025-09-01"
     },
     "ANXAUO": {
       "freq": "M",
-      "latest": 316906.0,
-      "latest_date": "2026-08-01",
-      "prior": 300771.0,
-      "prior_date": "2025-08-01"
+      "latest": 318833.0,
+      "latest_date": "2026-09-01",
+      "prior": 301157.0,
+      "prior_date": "2025-09-01"
     },
     "UDEFNO": {
       "freq": "M",
-      "latest": 19176.0,
-      "latest_date": "2026-08-01",
-      "prior": 14564.0,
-      "prior_date": "2025-08-01"
+      "latest": 26363.0,
+      "latest_date": "2026-09-01",
+      "prior": 25125.0,
+      "prior_date": "2025-09-01"
     },
     "PNFI": {
       "freq": "Q",
-      "latest": 4737.171,
-      "latest_date": "2026-04-01",
-      "prior": 4321.643,
-      "prior_date": "2025-04-01"
+      "latest": 4946.552,
+      "latest_date": "2026-07-01",
+      "prior": 4412.236,
+      "prior_date": "2025-07-01"
     },
     "MCUMFN": {
       "freq": "M",
@@ -45,10 +45,6 @@
     }
   },
   "pnfi_yoy": [
-    {
-      "period": "2024-Q3",
-      "yoy": 6.5
-    },
     {
       "period": "2024-Q4",
       "yoy": 4.5
@@ -76,36 +72,40 @@
     {
       "period": "2026-Q2",
       "yoy": 9.6
+    },
+    {
+      "period": "2026-Q3",
+      "yoy": 12.1
     }
   ],
   "leadlag": {
-    "window": "1992 Q1 – 2026 Q2",
-    "quarters": 134,
+    "window": "1992 Q1 – 2026 Q3",
+    "quarters": 135,
     "results": [
       {
         "lag": 0,
-        "r": 0.769,
-        "n": 134
+        "r": 0.771,
+        "n": 135
       },
       {
         "lag": 1,
-        "r": 0.836,
-        "n": 133
+        "r": 0.838,
+        "n": 134
       },
       {
         "lag": 2,
         "r": 0.794,
-        "n": 132
+        "n": 133
       },
       {
         "lag": 3,
         "r": 0.671,
-        "n": 131
+        "n": 132
       },
       {
         "lag": 4,
-        "r": 0.5,
-        "n": 130
+        "r": 0.499,
+        "n": 131
       }
     ]
   }
