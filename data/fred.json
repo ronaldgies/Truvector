@@ -1,23 +1,23 @@
 {
-  "generated": "2026-11-02",
+  "generated": "2026-11-09",
   "series": {
     "NEWORDER": {
       "freq": "M",
-      "latest": 88039.0,
+      "latest": 88185.0,
       "latest_date": "2026-09-01",
       "prior": 77591.0,
       "prior_date": "2025-09-01"
     },
     "ANXAUO": {
       "freq": "M",
-      "latest": 318833.0,
+      "latest": 318828.0,
       "latest_date": "2026-09-01",
       "prior": 301157.0,
       "prior_date": "2025-09-01"
     },
     "UDEFNO": {
       "freq": "M",
-      "latest": 26363.0,
+      "latest": 26336.0,
       "latest_date": "2026-09-01",
       "prior": 25125.0,
       "prior_date": "2025-09-01"
