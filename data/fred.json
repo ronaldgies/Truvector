@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09",
+  "generated": "2026-11-24",
   "series": {
     "NEWORDER": {
       "freq": "M",
@@ -31,17 +31,17 @@
     },
     "MCUMFN": {
       "freq": "M",
-      "latest": 75.924,
-      "latest_date": "2026-09-01",
-      "prior": 75.692,
-      "prior_date": "2025-09-01"
+      "latest": 76.077,
+      "latest_date": "2026-10-01",
+      "prior": 74.966,
+      "prior_date": "2025-10-01"
     },
     "SEAT653MFGN": {
       "freq": "M",
-      "latest": 167.9,
-      "latest_date": "2026-09-01",
-      "prior": 162.5,
-      "prior_date": "2025-09-01"
+      "latest": 168.0,
+      "latest_date": "2026-10-01",
+      "prior": 162.7,
+      "prior_date": "2025-10-01"
     }
   },
   "pnfi_yoy": [
